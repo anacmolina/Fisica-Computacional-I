@@ -1,1 +1,1 @@
-Este archivo va a se descargado en el repositorio local
+Este archivo se descargara en el repositorio local
