@@ -1,0 +1,19 @@
+6 de agosto de 2019
+===================================
+Cuenta de GitHub
+Crear repositorio en cuenta de GitHub
+Installing Git
+mkdir Repositorio ==> Crea carpeta asociada al repositorio
+touch file.txt ==> Archivo en el repositorio
+git init ==> Inicializa el repositorio (una vez)
+git add file.txt ==> Guarda la versión del archivo
+git commit -a -m  'Mi primer commit' ==> 
+git remote add origin https://github.com/anacmolina/Repositorio.git ==> Asocia la carpeta local con la de la nube
+git push -u origin master ==> Actualiza los archivos
+
+Del GitHub repostorio al Local se usa PUSH
+Del Local repositorio al GitHub se usa PULL
+
+Configuracion de git local
+git config --global user.email "anac.molina@udea.edu.co"
+git config --global user.name ''anacmolina"
