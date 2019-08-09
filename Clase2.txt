@@ -1,0 +1,42 @@
+8 de agosto de 2019
+===============================
+Primero se uso la herramienta CLONE de git, el comando es
+
+git clone https://github.com/jotadram6/TEST1.git ==> repositorio a clonar
+git pull origin master ==> Permite actualizar el repositorio 
+
+Para poder subir archivos a otros GitHub se debe habilitar permisos en 
+la opcion Settings y hacer a esta persona un colaborador.
+Luego para subir un archivo como colaborador
+1. Se debe clonar el repositorio
+2. Parado en este se crea el archivo a adicionar
+git add file
+git commit -a -m 'Mensaje'
+3. Para subirlo se hace un push
+git push origin master
+
+Una forma mas segura de poder hacer este tipo de procesos como agregar 
+files a un repositorio es hacer un FORK.
+Para hacer esto:
+1.Debe ir al repositorio al que se le desea hacer un fork
+y darle fork en la pagina en GitHub
+2. Se crea un clone del repositorio
+git clone https://github.com/anacmolina/CUFICO_2019_2.git
+git remote -v ==> Me permite ver las direcciones asociadas a la carpeta 
+y su posibilidad de subir o bajar archivos
+3. Se entro en la carpeta 
+CUFICO_2019_2/Seguimiento/Seguimiento1/N1044508251
+4. Se creo un archivo y se subio a esta carpeta
+touch file.txt
+git add file.txt
+git commit -a -m 'Mensaje'
+git push origin master
+5. Para sincronizar ambas carpetas, es decir, la que se le dio fork y
+propia se escribe
+git remote add upstream https://github.com/jotadram6/CUFICO_2019_2.git =
+=> es el repositorio que se clono inicialmente 
+6. Luego se deben correr los siguientes comandos para sincronizar
+git fetch upstream
+git merge upstream/master
+git push origin master
+7. Luego debe hacerse el pull request en la pagina de GitHub
