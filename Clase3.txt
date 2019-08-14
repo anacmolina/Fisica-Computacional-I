@@ -1,0 +1,78 @@
+13 de agosto de 2019
+=================================
+Algunos comandos de Bash
+
+ls ---> Muestra el contenido de la carpeta
+man ---> Muestra el manual de algun comando (Contiene el orden de ejecución)
+ls --help ---> Da ayuda para conocer las funciones del comando(No siempre funciona)
+ls -l ---> Lista de archivo de la carpeta y sus permisos (Lectura, escritura y ejecución)
+ls -lSsr ---> Si se quiere mostrar el contenido de menor a mayor por tamaño se escribe
+ls -ltrh ---> Lista organizada por fecha y con tamaño facil de leer
+ls -a ---> Muestra todas las carpetas incluyendo las ocultas (. o ..)
+more ---> Muestra el contenido de un archivo en pantalla por pedazos
+less ---> Navega por el archivo en modo de lectura
+head ---> Permite ver la parte inicial del archivo (-n se puede elegir la cantidad lineas)
+tail ---> Imprime la parte final de archivo (-f actualiza si se esta escribiendo sobre el)
+tar ---> Permite comprimir archivos
+cat ---> Descarga el contenido en pantalla
+
+ls -l | less ---> Manda la lista de archivo a less - | Redirecciona la salida de comandos a less
+ls -l > listadearchivos.txt ---> Escribe una archivo con la lista | Redirecciona la salida del comando a escribir un archivo
+
+wc ---> Contar lista de cosas
+
+ls -l | wc -l ---> Cuenta la lineas de la lista
+
+Para contar palabras en un archivo
+cat text.txt | wc -w
+wc -w text.txt
+
+Para crear un archivo con cat
+cat > Newtext.txt ---> Me crea archivo y me permite ir escribiendo en la terminal
+head text.txt | cat > Nextext2.txt ---> Escribe la parte inicial de text.txt en Newtext2.txt
+
+Para comparar dos archivos
+diff Newtext.txt Newtext2.txt
+
+Editor de texto NANO
+ctrl + w ---> Buscar
+ctrl + c ---> Posición actual
+
+Atajos terminal
+ctrl + a ---> El cursor se va para el inicio de la linea
+ctrl + e ---> El cursor se va para el final de la linea
+ctrl + k ---> El cursor corta lo que sigue a partir de el
+ctrl + y ---> Pegar
+ctrl + r ---> Busca los comandos usados en la terminal
+
+grep ---> Busca patrones en el archivo (-r lee los archivos recursivamente ,-n numero de linea)
+
+grep -r -n ' et' text.txt ---> Busca las coincidencias con ' et' en el archivo
+
+Editor de texto EMACS
+ctrl + a ---> El cursor se va para el inicio de la linea
+ctrl + e ---> El cursor se va para el final de la linea
+ctrl + k ---> El cursor corta lo que sigue a partir de el
+ctrl + y ---> Pegar
+ctrl + r ---> Busca los comandos usados en la terminal
+ctrl + space ---> Seleccionar
+ctrl + s ---> Buscar
+ctrl + x s ---> Guardar
+ctrl + x f ---> Abrir archivo nuevo
+ctrl + x c ---> Cerrar
+
+emacs -nw ---> Me permite abrir emacs en la terminal
+
+jobs ---> Estado de los comandos
+top ---> Muestra procesos corriendo
+htop ---> Muestra de forma más detallada (Muestra el numero del proceso)
+f3 ---> Buscar en htop
+
+fg ---> Front ground (Correr en primer plano)
+bg ---> Back ground (Correr en segundo plano)
+
+Terminal procesos
+kill #proceso ---> Termina el proceso con ese numero
+kill %# ---> El # sale en jobs
+kill -9 # ---> Terminar a fuerza
+
