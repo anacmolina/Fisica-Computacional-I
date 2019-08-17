@@ -1,0 +1,62 @@
+15 de agosto de 2019
+====================================
+Bash
+
+HW = "Hello world" ---> Se define una variable (Igual que en python)
+; es igual al salto de linea
+echo ---> Imprime en pantalla el contenido de una variable
+$ ---> Invoca el contenido de una variable
+
+echo $(( a+b )) ---> Para hacer operaciones se utiliza el doble parentesis. Los espacios son importantes
+
+Operadores de incremento y disminucion
+++a ---> Incremento
+--a ---> Diminucion
+
+date ---> Sacar la fecha exacta
+fecha=$(date) ---> Guarda la fecha en una variable. Funciona para todo.
+Fecha=$(date +%Y%m%d) ---> Generar la fecha sin espacios
+
+Condicionales
+
+FOR (estructura)
+
+for _ in __
+do
+Acciones
+done
+
+IF (estructura)
+
+if [variable1 vs variable2]
+then
+Acciones
+else
+Acciones
+fi
+
+Ejemplos de uso del for
+
+for i in 1 2 3 4 5 6; do echo $i; done ---> Loop para imprimir i
+
+for i in 1 2 3 4 5 6; do echo -n $i; done ---> Loop para imprimir i sin salto de linea
+
+for i in "a" "e" "i" "o" "u"; do echo "Hola t$i"; done ---> Loop que imprime el valor de i (en este caso string)
+
+for i in "a" "e" "i" "o" "u"; do echo "Hola t${i}t"; done ---> Si se desea escribir despues de la variable string
+
+for i in "a" "e" "i" "o" "u"; do echo "Hola t${i}t${HW}"; done
+
+for i in {1..10}; do echo $(( i+3 )); done ---> Loop que imprime la suma de i+3
+
+for i in {1..10..2}; do echo $(( i+3 )); done ---> Loop que imprime la suma de i+3 pero con paso de 2 de 1 a 10
+
+for i in {1..10..2}; do touch Archivo$i; done ---> Crea un archivo con final i
+
+for i in {1..10..2}; do touch Archivo${i}.txt; done ---> Crea un archivo i con extension .txt
+
+Ejercicio de clase
+Utilice el for de bash para crear n directorios cada uno m archivos que se llamen foldern y archivom.txt respectivamente, cada archivo debe contener una palabra de elección propia. Los valores son n=7 y m=10.
+
+Solucion
+P=Portatil; for n in {1..7}; do mkdir Folder${n}; for m in {1..10};do touch Folder${n}/archivo${m}.txt; echo $P | cat > Folder${n}/archivo${m}.txt; done; done;
