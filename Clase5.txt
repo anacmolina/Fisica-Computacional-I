@@ -1,0 +1,62 @@
+20 de agosto de 2019
+=================================
+
+Primero solución del profesor al problema de bash
+for i in {1..7}; do mkdir Folder${i}; for j in {1..10}; do echo "Yo"| cat > Folder${i}/Archivo${j}.txt; done; done
+
+Se sugiere si así se desea estudiar de forma independiente REGEX
+
+Script de Bash
+
+#!/bin/bash ---> Linea para indicar donde esta el interprete (./ para ejecutar asi)
+
+bash file.sh ---> Indica el interprete de forma inmediata
+which bash ---> me dice donde esta el interprete que se usa
+
+ls -ltrh ---> Permite ver que permisos de rwx tiene el archivo
+chmod +x file.sh ---> Me permite darle permisos de ejecución a un archivo
+./file.sh ---> Forma de ejecutar al darle los permisos
+
+Estructura de if
+
+if [ var1 comparacion var2 ];
+then
+Acciones
+else
+Acciones
+fi
+
+Comparadores de string en Bash
+
+-n ---> Ver si algo esta vacío
+-z ---> Ver si algo es un string
+= ---> Compara si algo es igual a otra cosa (== python)
+!= ---> Compara si algo es diferente
+< > ---> Mayor y menor
+
+Comparadores de numeros
+
+= o -eq ---> Este ultimo diseñado propiamente para numeros
+-lt ---> Less than
+-gt ---> Greater than
+-le ---> Less equal
+-ge ---> Greater equal
+-ne ---> Not equal
+
+Ejercicio
+Haga un script de bash que calcule los primeros 1000 numeros de la serie de fibonacci e  imprima solamente los pares.
+
+Script Solucion
+
+f0=0;
+f1=1;
+for i in {1..1000};
+do
+    fn=$(( f1+f0 ));
+    if [ $(( fn%2 )) = 0 ];
+    then
+        echo $fn;
+    fi;
+    f0=$f1;
+    f1=$fn;
+done
