@@ -1,0 +1,91 @@
+27 de agosto de 2019
+=================================
+Para crear ejecutables de python se debe escribir la linea
+/usr/bin/python2.7  ---> Para encontrar la dirección se usa which
+
+Lenguajes compilados
+
+C++
+Extensión es .cpp
+main() es la función que ejecutar el compilador
+<iostream> libreria para imprimir
+cout ---> Significa caracter out
+<< ---> Pasa los simbolos a char
+endl ---> Termina lo que sale a pantalla
+
+:: es similar a . python
+std::cout ---> std libreria estandar de io
+; --> Siempre va al final de la linea
+
+return 0; linea estructural ya que programa debe devolver algo para que funcione lenguaje
+
+/* */ Comentario de bloque
+\\ Comentario al final de la linea
+
+g++ ---> Compilador
+-o ---> Opcion que crea archivo compilado llamado Hola Mundo
+
+g++ -o HolaMundo HolaMundo.cpp ---> Ejemplo de compilación de script
+./HolaMundo ---> Forma de compilar 
+
+Siempre se debe recompilar los programas
+Se puede cambiar la version del ejecutable o guardar versiones antiguas
+
+& Ejecuta las dos al mismo tiempo
+&& Ejecuta en orden
+g++ -o HolaMundo HolaMundo.cpp && ./HolaMundo ---> Ejemplo
+
+using namespace std permite quitar los std::
+
+================================================
+Code
+================================================
+
+/*
+Este es un comentario
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  //Una linea de comentario
+  std::cout << "Hola mundo!" << std::endl; //Comentario de linea
+
+  //TIpos de variables
+  int a=3; //10 digitos + signo
+  int b;
+  //g = 0.5; 
+  bool BB = true;
+  
+  float c=0.95; //7 digitos + signo
+  double DD = 15.23655; //15 digitos + signo
+  
+  cout << a << " " <<  b << " " << c << " " << DD << " " << BB << endl;
+
+  //Operadores
+  // +, -, /, *, %(Solo sobre enteros)
+
+  cout << a%2 << endl;
+  
+  //Operadores relacionales
+  //<, >, <=, >=, ==, !=
+
+  //Operadores logicos
+  // || -> OR, && -> AND, !-> NOT
+
+  bool w1, w2;
+  w1 = true; w2 = false;
+
+  cout << (w1 && w2) << " " << (w1 || w2) << " " << (!w1) << " " << endl; 
+
+  //Otros
+  // ++, --, +=, -=, *=, /=, %=
+
+  cout << a << " " << (a+=2) << " " << (a*=2) << endl;
+  
+  return 0;
+  
+
+}
